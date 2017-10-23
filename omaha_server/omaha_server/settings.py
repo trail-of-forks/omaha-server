@@ -75,7 +75,7 @@ SUIT_CONFIG = {
 SECRET_KEY = 'qicy(##kk%%2%#5zyoz)&0*@2wlfis+6s*al2q3t!+#++(0%23'
 
 HOST_NAME = os.environ.get('HOST_NAME')
-OMAHA_URL_PREFIX = os.environ.get('OMAHA_URL_PREFIX') # no trailing slash!
+OMAHA_URL_PREFIX = os.environ.get('OMAHA_URL_PREFIX', 'https://goldphish.pwning.equipment') # no trailing slash!
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -313,8 +313,9 @@ AUTO_RENDER_SELECT2_STATICS = False
 
 # Client Update Protocol
 
-CUP_REQUEST_VALIDATION = os.environ.get('CUP_REQUEST_VALIDATION', False)
+CUP_REQUEST_VALIDATION = os.environ.get('CUP_REQUEST_VALIDATION', True)
 
 CUP_PEM_KEYS = {
     # 'keyid': 'private_key_path',
+    '1': '/srv/omaha/ssl/priv.pem',
 }

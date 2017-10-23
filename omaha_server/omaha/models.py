@@ -24,6 +24,7 @@ from django.utils.encoding import python_2_unicode_compatible
 import os
 import hashlib
 import base64
+import binascii
 
 from django.db import models
 from django.conf import settings
@@ -324,10 +325,10 @@ def pre_version_save(sender, instance, *args, **kwargs):
         else:
             old.file.delete(save=False)
             old.file_size = 0
-    sha1 = hashlib.sha1()
+    sha256 = hashlib.sha256()
     for chunk in instance.file.chunks():
-        sha1.update(chunk)
-    instance.file_hash = base64.b64encode(sha1.digest()).decode()
+        sha256.update(chunk)
+    instance.file_hash = binascii.hexlify(sha256.digest()).decode()
 
 
 

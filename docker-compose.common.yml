@@ -8,7 +8,8 @@ web:
   image: crystalnix/omaha-server:stable
   privileged: true
   ports:
-    - "9090:80"
+    - "443:8443"
+    - "80:8080"
   environment:
     DB_HOST: db
     DB_PORT: 5432
