@@ -31,4 +31,4 @@ django-bootstrap3==7.0.1
 protobuf==3.0.0a3
 protobuf-to-dict==0.1.0
 django-dynamic-preferences==0.8.1
-ecdsa==0.13
+ecdsa==0.13.3
