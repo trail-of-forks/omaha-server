@@ -23,7 +23,7 @@ django-tables2==1.2.1
 clom==0.8.0a1
 furl==0.4.93
 django-ace==1.0.2
-djangorestframework==3.3.3
+djangorestframework==3.11.2
 Markdown==2.6.6
 pytz==2016.4
 Django-Select2==5.8.4
