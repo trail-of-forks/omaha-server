@@ -15,7 +15,7 @@ bitmapist==3.97
 singledispatch==3.4.0.3
 django-bower==5.1.0
 django-nvd3==0.9.7
-django-filter==0.13.0
+django-filter==2.4.0
 celery[redis]==3.1.23
 django-cacheops==2.4.3
 msgpack-python==0.4.7
